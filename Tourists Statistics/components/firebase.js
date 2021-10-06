@@ -27,10 +27,12 @@ async function addData() {
   e.preventDefault()
   console.log('hello friends i have been clicked')
   
+       let parent = document.querySelector('#ar-btn').parentElement
+       console.log(parent)
 
   let ArrivalDetails = e.target.parentElement.childNodes[1].childNodes
   let NumTourist = ArrivalDetails[4].value
-  console.log(NumTourist)
+  
   let Month = ArrivalDetails[19].value
   let Year = ArrivalDetails[23].value
   let  Nationality = ArrivalDetails[8].childNodes[1].childNodes[1].value
@@ -76,6 +78,8 @@ async function addData() {
       })
     }, 5000)
 })
+
+
   let Row = document.querySelector('.arr-data')
 
   function render(doc) {
@@ -295,6 +299,20 @@ async function addData() {
     })
 
   }NationalParks().catch(function(){})
+
+  //NATIONAL PARKS VISITS
+
+  async function NatVisits() {
+    
+    document.querySelector('#natvisits-details').addEventListener('submit', function (e) {
+      e.preventDefault()
+      
+      let parenthere = document.querySelector('#natvi-btn')
+      console.log(parenthere)
+
+      })
+  
+  }NatVisits()
  
 }addData()
 
