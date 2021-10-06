@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Add National Parks</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"/>
+	<meta name="keywords"  />
+	<meta name="author"  />
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	
+		<!-- FIREBASE INIT -->
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+		<!-- firebase SDK -->
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+	<link rel="icon" href="../PACLASS.png">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="owl.carousel.min.css">
+	<link rel="stylesheet" href="owl.theme.default.min.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="flexslider.css">
+	<!-- progressive web app  -->
+	<link rel="manifest" href="manifest.json">
+
+	<!-- Pricing -->
+	<link rel="stylesheet" href="pricing.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body >
+		
+	
+    <div class="page">
+            <div class="header" style="margin-top: -60px;">
+                <div class="logo"><span style="color: orangered; font-size:x-larger; font-style:italic">Tourist</span> Statistics</div>
+                <div class="options">
+                     <div
+                    style="padding-right: 20px"><a href="../tourism.html"><i style="font-size: x-large;" class="icon-home"></i></a>
+                    </div>
+                    <div>
+                        <select name="" id="drop-menu" style="border: none;outline:none;width:75px">
+                            <option value="" style="display: none;">
+                                
+                                Arrivals
+                            </option>
+                            <option value="AddArrivals.html" style="position: absolute;">
+                                Add Arrival 
+                            </option>
+                         </select>
+                        <select name="" id="drop-menu" style="border: none;outline:none;width:100px">
+                            <option value="" style="display: none;">
+                                Departures
+                            </option>
+                            <option value="AddDeparture.html" style="position: absolute;">
+                                Add Departure
+                            </option>
+                         </select>
+                        <select name="" id="drop-menu" style="border: none;outline:none;color: rgb(0, 217, 255)">
+                            <option value="" style="display: none;">
+                                National parks
+                            </option>
+                            <option value="AddParks.html" style="position: absolute;">
+                                Add park 
+                            </option>
+                            <option value="AddparkVisit.html" style="position: absolute;">
+                                Add park visit
+                            </option>
+                         </select>
+                        <select name="" id="drop-menu" style="border: none;outline:none;width:90px">
+                            <option value="" style="display: none;">
+                                Museums
+                            </option>
+                            <option value="AddMuseum.html" style="position: absolute;">
+                                Add Museum 
+                            </option>
+                            <option value="Museumvisit.html" style="position: absolute;overflow-wrap:break-word">
+                                Add Museum visit
+                            </option>
+                         </select>
+                        <select name="" id="drop-menu" style="border: none;outline:none;">
+                            <option value="" style="display: none;">
+                                Heritage Sites
+                            </option>
+                            <option value="Addsite.html" style="position: absolute;">
+                                Add site
+                            </option>
+                            <option value="sitevisit.html" style="position: absolute;">
+                                Add site visit
+                            </option>
+                            
+                         </select>
+                    </div>
+                    <div class="report"><a href="../report.html">Reports</a> </div>
+                </div>
+                <div class="info">
+                    <div class="emp-number">Employee #: 002</div>
+                    <div>
+                        <a href="profile.html">
+                            <div  class="profile" style="text-align: center; background-color:white; font-weight:bold;cursor:pointer"><span><i class="icon-user2" style="font-size: larger; color:orangered;font-weight:bold"></i></span> <span>Profile</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="statement" style="padding-top:40px">
+                <h1>National parks</h1>
+                <div><span style="font-size: x-large; color:orangered;">Save National Parks details </span> </div>
+            </div>
+            
+            <div class="add-ar" style="margin-bottom: 50px;">
+              <div class="addarrival">
+                  <form action="" class="park-details">
+                      <h2 style="color: orangered;">Add National park <br> details..</h2><hr>
+                      <input type="text" class="number-arr" placeholder="Enter National park name" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px;outline:none;border:none" required><br><br>
+                      <div class="ar-flex">
+                          <div>
+                             
+                              <select name="" id="category" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
+                                  <option value="" style="display: none;">Category
+                                  </option>
+                                  <option value="A">A</option>
+                                  <option value="B">B</option>
+                                  <option value="C">C</option>
+                                  <option value="D">D</option>
+                              </select>
+                          </div>
+                          <div>
+                             
+                             <select name="" id="nat-province" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
+                                  <option value="" style="display: none;padding:5px;border-radius: 10px">Select Province</option>
+                                  <option value="Lusaka" >Lusaka</option>
+                                  <option value="Northern" >Northern</option>
+                                  <option value="Southern" >Southern</option>
+                                  <option value="Central" >Central</option>
+                                  <option value="NorthWestern" >North western</option>
+                                  <option value="MUchinga" >Muchinga</option>
+                                  <option value="Eastern" >Eastern</option>
+                                  <option value="Western" >Western</option>
+                              </select>
+                          </div>
+                    </div>
+                     <hr>
+                          <div style="color: rgb(255, 255, 255);margin-top:-20px">Park Entry Fees</div>
+                      
+                      <input type="number" name="" id="nat-zk" style="color: black;padding:1px;border-radius: 10px;width:150px" placeholder="Citizens (ZK)" required>
+                      <input type="number" name="" id="nat-usdc" style="color: black;padding:1px;border-radius: 10px" placeholder="SADC Nationals (USD)" required><br> 
+                       <input type="number" name="" id="nat-usd" style="color: black;padding:1px;border-radius: 10px" placeholder="International (USD)" required><hr>
+                       <div style="color:gray">If Applicable</div>
+                        <div style="color:white">Self Drives (Resident/Non-Residents) (USD)</div>
+                       <input type="number" name="" id="nat-usd-g" style="color: black;padding:1px;border-radius: 10px" placeholder="International (USD)"><br><br>
+                        <button class="add-btn" id="ad-Nat" style="color: white;border-radius:10px;background-color:rgb(83, 191, 241);outline:none; border:none;">Add Details</button>
+                  </form>
+              </div>
+              <div class="ar-table" >
+                   <div class="succesEntry">successfully added new Data</div>
+                  <div class="Warning" >You have not entered any National Parks <br> Data yet!</div>
+                     <table style="width: 800px;">
+                         <caption style="text-align: center;color:rgb(28, 3, 245);font-weight:bolder;">Data Entered So far</caption>
+                         <tr class="t-h" style="background-color:#131921; color:white; margin:30px">
+                             <th>S/N</th>
+                             <th>ID</th>
+                             <th>Employee</th>
+                             <th>Park Name</th>
+                             <th>Category</th>
+                             <th>Province</th>
+                             <th>Citizens (ZK)</th>
+                             <th>Residents(SADC) (USD)</th>
+                             <th>International (USD)</th>
+                             <th>Residents/Non-Residents) (USD)</th>
+                             <th>Edit</th>
+                         </tr>
+                         <tbody class="park-data">
+                            
+                             
+                             <!-- <tr class="t-bo">
+                                <td class="S/n">1</td>
+                                <td class="id">5</td>
+                                <td class="em-nmb">0004</td>
+                                <td class="p-name">Blue Lagoon National Park</td>
+                                <td class="cgry">C</td>
+                                <td class="Prvc">Lusaka</td>
+                                <td class="zk">25.00</td>
+                                <td class="usd-sadc">5</td>
+                                <td class="usd">4</td>
+                                <td class="usd-d">4</td>
+                                <td class="del" style="border-right: solid 1px black">
+                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
+                                        Delete
+                                    </span>
+                                </td>
+                             </tr> -->
+                         </tbody>
+                     </table>
+                  </div>
+            </div>
+        </div>
+	
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	<script src="firebase.js"></script>
+    <script src="Scroll.js"></script>
+	</body>
+</html>
+

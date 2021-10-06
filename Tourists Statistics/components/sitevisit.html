@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Heritage Site visits</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"/>
+	<meta name="keywords"  />
+	<meta name="author"  />
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	
+		<!-- FIREBASE INIT -->
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+		<!-- firebase SDK -->
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+	<link rel="icon" href="../PACLASS.png">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="owl.carousel.min.css">
+	<link rel="stylesheet" href="owl.theme.default.min.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="flexslider.css">
+	<!-- progressive web app  -->
+	<link rel="manifest" href="manifest.json">
+
+	<!-- Pricing -->
+	<link rel="stylesheet" href="pricing.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body >
+		
+	
+    <div class="page">
+            <div class="header" style="margin-top: -60px;">
+                <div class="logo"><span style="color: orangered; font-size:x-larger; font-style:italic">Tourist</span> Statistics</div>
+                <div class="options">
+                    <div
+                    style="padding-right: 20px"><a href="../tourism.html"><i style="font-size: x-large;" class="icon-home"></i></a>
+                    </div>
+                    <div>
+                         <select name="" id="drop-menu" style="border: none;outline:none;width:75px">
+                            <option value="" style="display: none;">
+                                
+                                Arrivals
+                            </option>
+                            <option value="AddArrivals.html" style="position: absolute;">
+                                Add Arrival 
+                            </option>
+                         </select>
+                        <select name="" id="drop-menu" style="border: none;outline:none;width:100px">
+                            <option value="" style="display: none;">
+                                Departures
+                            </option>
+                            <option value="AddDeparture.html" style="position: absolute;">
+                                Add Departure
+                            </option>
+                         </select>
+                        <select name="" id="drop-menu" style="border: none;outline:none;">
+                            <option value="" style="display: none;">
+                                National parks
+                            </option>
+                            <option value="AddParks.html" style="position: absolute;">
+                                Add park 
+                            </option>
+                            <option value="AddparkVisit.html" style="position: absolute;">
+                                Add park visit
+                            </option>
+                         </select>
+                        <select name="" id="drop-menu" style="border: none;outline:none;width:90px">
+                            <option value="" style="display: none;">
+                                Museums
+                            </option>
+                            <option value="AddMuseum.html" style="position: absolute;">
+                                Add Museum 
+                            </option>
+                            <option value="Museumvisit.html" style="position: absolute;overflow-wrap:break-word">
+                                Add Museum visit
+                            </option>
+                         </select>
+                        <select name="" id="drop-menu" style="border: none;outline:none;color: rgb(0, 217, 255)">
+                            <option value="" style="display: none;">
+                                Heritage Sites
+                            </option>
+                            <option value="Addsite.html" style="position: absolute;">
+                                Add site
+                            </option>
+                            <option value="sitevisit.html" style="position: absolute;">
+                                Add site visit
+                            </option>
+                            
+                         </select>
+                    </div>
+                    <div class="report"><a href="../report.html">Reports</a> </div>
+                </div>
+                <div class="info">
+                    <div class="emp-number">Employee #: 002</div>
+                    <div>
+                        <a href="profile.html">
+                            <div  class="profile" style="text-align: center; background-color:white; font-weight:bold;cursor:pointer"><span><i class="icon-user2" style="font-size: larger; color:orangered;font-weight:bold"></i></span> <span>Profile</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="statement" style="padding-top:40px">
+                <h1>Heritage Site Visits</h1>
+                <div><span style="font-size: x-large; color:orangered;">Heritage site visits in Real Time</span> </div>
+            </div>
+            
+            <div class="add-ar" >
+              <div class="addarrival">
+                  <form action="" class="ar-details">
+                      <h2 style="color: orangered;">Add new Heritage site <br> visit <br> Details..</h2><hr>
+                      <input type="text" class="number-arr" placeholder="Enter number of Tourists" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px;outline:none;border:none" required><br>
+                      <div>Note: Visitors under the age 18 <br> pay 50% of the entry fes into any museum. Specify if:</div>
+                      <div class="flex-s" style="display: flex;justify-content:space-between;color:white;">
+                              <input type="radio" name="18" id="bel-18" value=' Tourist Are Below 18'>Tourists Are Below 18
+                          
+                              <input type="radio" name="18" id="bel-18" value='Tourist Are Above 18'>Tourists Are Above 18
+                      </div>
+                      <br>
+                      <div class="ar-flex">
+                          <div>
+                             
+                              <select name="" id="" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
+                                  <option value="" style="display: none;">Choose Nationality</option>
+                                  <option value="" >Zambian</option>
+                                  <option value="" >American</option>
+                                  <option value="" >Russian</option>
+                                  <option value="" >Nigerian</option>
+                                  <option value="" >South African</option>
+                              </select>
+                          </div>
+                          <div>
+                              <div type="text" placeholder="Region" style="color: rgb(2, 255, 65); padding:5px;border-radius: 10px;height:30px;width:200px;background-color:rgb(119, 115, 115);font-weight:bolder">Region</div>
+                          </div>
+                         
+                    </div><br>
+                      <div class="ar-flex" style="display: flex;
+                                 justify-content: space-around;">
+                          <div>
+                             
+                             <select name="" id="" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
+                                  <option value="" style="display: none;padding:5px;border-radius: 10px">Select Park Name</option>
+                                  <option value="" >Luiwa</option>
+                                  <option value="" >Luangua</option>
+                              </select>
+                          </div>
+                         
+                    </div>
+                    <br>
+                     <hr>
+                          <div style="color: rgb(255, 255, 255);margin-top:-20px">Month</div>
+                      <select name="" id="" style="color: black;padding:5px;border-radius: 10px" required>
+                          <option value="" style="display: none;">Select the month</option>
+                          <option value="">January</option>
+                          <option value="">February</option>
+                          <option value="">March</option>
+                          <option value="">April</option>
+                          <option value="">May</option>
+                          <option value="">June</option>
+                          <option value="">July</option>
+                          <option value="">August</option>
+                          <option value="">September</option>
+                          <option value="">October</option>
+                          <option value="">November</option>
+                          <option value="">December</option>
+                      </select>
+                          <div style="color: rgb(255, 255, 255);">Year</div>
+                      <select name="" id="" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
+                          <option value="" style="display: none;">Select the Year</option>
+                          <option value="">2021</option>
+                          <option value="">2020</option>
+                          <option value="">2019</option>
+                          <option value="">2018</option>
+                          <option value="">2017</option>
+                          <option value="">2016</option>
+                          <option value="">2015</option>
+                          <option value="">2014</option>
+                      </select><br><br>
+                        <button class="add-btn" style="color: white;border-radius:10px;background-color:rgb(83, 191, 241);outline:none; border:none;">Add Details</button>
+                  </form>
+              </div>
+              <div class="ar-table">
+                     <table style="width: 850px;">
+                         <caption style="text-align: center;color:rgb(28, 3, 245);font-weight:bolder;">Data Entered So far</caption>
+                         <tr class="t-h" style="background-color:#131921; color:white; margin:30px">
+                             <th>S/N</th>
+                             <th>ID</th>
+                             <th>Employee</th>
+                             <th>Tourists No#</th>
+                             <th>Age</th>
+                             <th>Nationality</th>
+                             <th>Site Visited</th>
+                             <th>Currency Type</th>
+                             <th>Fee</th>
+                             <th>Month</th>
+                             <th>Year</th>
+                             <th>Edit</th>
+                         </tr>
+                         <tr class="ar-data">
+                             <tr class="t-bo">
+                                <td class="S/n">1</td>
+                                <td class="id">5</td>
+                                <td class="em-nmb">0004</td>
+                                <td class="t-nmb">123</td>
+                                <td class="t-nmb">40</td>
+                                <td class="N">American</td>
+                                <td class="Region">Luangwa Falls</td>
+                                <td class="PoE">International (USD)</td>
+                                <td class="Pt">50</td>
+                                <td class="mon">January</td>
+                                <td class="year">2021</td>
+                                <td class="del" style="border-right: solid 1px black">
+                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
+                                        Delete
+                                    </span>
+                                </td>
+                             </tr>
+                             <tr class="t-bo">
+                                <td class="S/n">1</td>
+                                <td class="id">5</td>
+                                <td class="em-nmb">0004</td>
+                                <td class="t-nmb">123</td>
+                                <td class="t-nmb">40</td>
+                                <td class="N">American</td>
+                                <td class="Region">Mwela Rock</td>
+                                <td class="PoE">International (USD)</td>
+                                <td class="Pt">50</td>
+                                <td class="mon">January</td>
+                                <td class="year">2021</td>
+                                <td class="del" style="border-right: solid 1px black">
+                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
+                                        Delete
+                                    </span>
+                                </td>
+                             </tr>
+                             <tr class="t-bo">
+                                <td class="S/n">1</td>
+                                <td class="id">5</td>
+                                <td class="em-nmb">0004</td>
+                                <td class="t-nmb">123</td>
+                                <td class="t-nmb">40</td>
+                                <td class="N">American</td>
+                                <td class="Region">Kifubwa</td>
+                                <td class="PoE">International (USD)</td>
+                                <td class="Pt">50</td>
+                                <td class="mon">January</td>
+                                <td class="year">2021</td>
+                                <td class="del" style="border-right: solid 1px black">
+                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
+                                        Delete
+                                    </span>
+                                </td>
+                             </tr>
+                             <tr class="t-bo">
+                                <td class="S/n">1</td>
+                                <td class="id">5</td>
+                                <td class="em-nmb">0004</td>
+                                <td class="t-nmb">123</td>
+                                <td class="t-nmb">40</td>
+                                <td class="N">American</td>
+                                <td class="Region">Zambezi source</td>
+                                <td class="PoE">International (USD)</td>
+                                <td class="Pt">50</td>
+                                <td class="mon">January</td>
+                                <td class="year">2021</td>
+                                <td class="del" style="border-right: solid 1px black">
+                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
+                                        Delete
+                                    </span>
+                                </td>
+                             </tr>
+                            
+                             
+                            
+                           
+                         </tr>
+                     </table>
+                  </div>
+            </div>
+        </div>
+	
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	<script src="firebase.js"></script>
+    <script src="Scroll.js"></script>
+	</body>
+</html>
+

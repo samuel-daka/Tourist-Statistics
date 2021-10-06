@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Profile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"/>
+	<meta name="keywords"  />
+	<meta name="author"  />
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	
+		<!-- FIREBASE INIT -->
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+		<!-- firebase SDK -->
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+	<link rel="icon" href="../PACLASS.png">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="owl.carousel.min.css">
+	<link rel="stylesheet" href="owl.theme.default.min.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="flexslider.css">
+	<!-- progressive web app  -->
+	<link rel="manifest" href="manifest.json">
+
+	<!-- Pricing -->
+	<link rel="stylesheet" href="pricing.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body >
+		
+	
+    <div class="page">
+            <div class="header" style="margin-top: -60px;">
+                <div class="logo"><span style="color: orangered; font-size:x-larger; font-style:italic">Tourist</span> Statistics</div>
+                <div class="options">
+                    <div
+                    style="padding-right: 20px"><a href="../tourism.html"><i style="font-size: x-large;" class="icon-home"></i></a>
+                    </div>
+                  
+                    <div>
+                        <select name="" id="drop-menu" style="border: none;outline:none;width:75px">
+                            <option value="" style="display: none;">
+                                
+                                Arrivals
+                            </option>
+                            <option value="AddArrivals.html" style="position: absolute;">
+                                Add Arrival 
+                            </option>
+                         </select>
+                        <select name="" id="drop-menu" style="border: none;outline:none;width:100px">
+                            <option value="" style="display: none;">
+                                Departures
+                            </option>
+                            <option value="AddDeparture.html" style="position: absolute;">
+                                Add Departure
+                            </option>
+                         </select>
+                        <select name="" id="drop-menu" style="border: none;outline:none;">
+                            <option value="" style="display: none;">
+                                National parks
+                            </option>
+                            <option value="AddParks.html" style="position: absolute;">
+                                Add park 
+                            </option>
+                            <option value="AddparkVisit.html" style="position: absolute;">
+                                Add park visit
+                            </option>
+                         </select>
+                        <select name="" id="drop-menu" style="border: none;outline:none;width:90px">
+                            <option value="" style="display: none;">
+                                Museums
+                            </option>
+                            <option value="AddMuseum.html" style="position: absolute;">
+                                Add Museum 
+                            </option>
+                            <option value="Museumvisit.html" style="position: absolute;overflow-wrap:break-word">
+                                Add Museum visit
+                            </option>
+                         </select>
+                        <select name="" id="drop-menu" style="border: none;outline:none;">
+                            <option value="" style="display: none;">
+                                Heritage Sites
+                            </option>
+                            <option value="Addsite.html" style="position: absolute;">
+                                Add site
+                            </option>
+                            <option value="sitevisit.html" style="position: absolute;">
+                                Add site visit
+                            </option>
+                            
+                         </select>
+                    </div>
+                    <div class="report"><a href="../report.html">Reports</a> </div>
+                </div>
+                <div class="info">
+                    <div class="emp-number">Employee #: 002</div>
+                    <div>
+                        <a href="profile.html">
+                            <div  class="profile" style="text-align: center; background-color:white; font-weight:bold;cursor:pointer"><span><i class="icon-user2" style="font-size: larger; color:orangered;font-weight:bold"></i></span> <span>Profile</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="statement" style="padding-top:30px">
+                <h1>Employee Profile</h1>
+                <div><span style="font-size: x-large; color:orangered;">Your Profile <br></span> View your details and edit them</div>
+            </div>
+            <img class="bg-img" src="Liuwa.jpg" alt="" style="position: absolute;z-index:-5; height:350px">
+            <div class="prof" >
+               <div class="dash">
+                   <div class="img-e" style="text-align: center;">
+                       <img src="../components/profile.jpg" alt="" height="70px" style="border-radius: 100%;">
+                       <div class="main-info">
+                           <div>Employee Number: <span>0023</span></div>
+                           <div>Position: <span>Documentalist</span></div>
+                           <div>Role: <span>User</span></div>
+                       </div>
+                   </div>
+                   <div class="other-info">
+                       <div class="overview">
+                           <div class="flexx">
+                               <div class="points-cr">Points Created:</div>
+                               <div class="points-value">0</div>
+                           </div>
+                           <div class="flexx">
+                               <div class="points-cr">Arrivals Added:</div>
+                               <div class="points-value">0</div>
+                           </div>
+                           <div class="flexx">
+                               <div class="points-cr">Departures Added:</div>
+                               <div class="points-value">0</div>
+                           </div>
+                       </div>
+                       <div class="overview">
+                           <div class="flexx">
+                               <div class="points-cr">Parks Added: </div>
+                               <div class="points-value">0</div>
+                           </div>
+                           <div class="flexx">
+                               <div class="points-cr">Parks Visits Added: </div>
+                               <div class="points-value">0</div>
+                           </div>
+                       </div>
+                       <div class="overview">
+                           <div class="flexx">
+                               <div class="points-cr">Museums Added:</div>
+                               <div class="points-value">0</div>
+                           </div>
+                           <div class="flexx">
+                               <div class="points-cr">Museums Visits Added:</div>
+                               <div class="points-value">0</div>
+                           </div>
+                       </div>
+                       <div class="overview">
+                           <div class="flexx">
+                               <div class="points-cr">Heritage Sites Added:</div>
+                               <div class="points-value">0</div>
+                           </div>
+                           <div class="flexx">
+                               <div class="points-cr">Heritage Sites Visits Added:</div>
+                               <div class="points-value">0</div>
+                           </div>
+                       </div>
+                   </div>
+
+               </div>
+               <div class="moderations">
+                   <button>Edit<i class="icon-edit"></i></button>
+                   <button>Change Password<i class="icon-lock-closed"></i></button>
+                   <button class="logou">Log out</button>
+               </div>
+            </div>
+        </div>
+	
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	<script src="firebase.js"></script>
+    <script src="Scroll.js"></script>
+	</body>
+</html>
+

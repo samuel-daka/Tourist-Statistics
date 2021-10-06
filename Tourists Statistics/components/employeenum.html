@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="components/style.css">
+
+        	<!-- FIREBASE INIT -->
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+		<!-- firebase SDK -->
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+    </head>
+    <body style="background-color: #1f242b;">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="login-panel" style="text-align: center;margin-top:100px;font-size:x-large"> 
+        <div class="title">
+            <h1 style="color: orangered;">Ministry of Tourism and Arts</h1>
+        </div>
+
+        <div style="color: white;">Please your Employee Number Below</div><span style='color:gray'>NOTE: this a prototype and so an employee number has not been given. Your can enter Your Name instead</span><br><br>
+        <div style="color:orangered">Your Name</div>
+        <form action="" class="e-nmu">
+            <input style="padding:5px; border-radius:10px;color: black" type="text" class="name" placeholder="Enter name as employee identity"><br>
+            <button style="background-color: skyblue;border-radius:5px;color:black;box-shadow:0px 0px 3px 3px white; " class="enter-n">Enter</button>
+
+        </form>
+        
+
+    </div>
+        
+        <script src="firebase.js" ></script>
+        <script src="components/Scroll.js" ></script>
+    </body>
+</html>
