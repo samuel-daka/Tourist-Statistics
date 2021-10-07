@@ -485,17 +485,32 @@ async function addData() {
       let park = parent.querySelector('#musV-name').value
       let Region = parent.querySelector('#musV-region').textContent
       let Nationality = parent.querySelector('#musV-nat').value
-      let Below18 = parent.querySelector('#bel-18').value
-      let Above18 = parent.querySelector('#abv-18').value
+      let Age = function () {
+        let Below18 = parent.querySelector('#bel-18').value
+        let Above18 = parent.querySelector('#abv-18').value
+        if (parent.querySelector('#bel-18').value) {
+          console.log(parent.querySelector('#bel-18').value)
+            return Below18
+        }
+        if (parent.querySelector('#abv-18').value) {
+          console.log(parent.querySelector('#abv-18').value)
+          return Above18
+          
+        }
+      }
+      
+      
       let numTourist = parent.querySelector('.tnumV').value
+
+     
 
       db.collection('MuseumVisits').add({
         html:` <tr class="t-bo">
                                 <td class="S/n">1</td>
                                 <td class="id">5</td>
                                 <td class="em-nmb">0004</td>
-                                <td class="t-nmb">123</td>
-                                <td class="t-nmb">40</td>
+                                <td class="t-nmb">${numTourist}</td>
+                                <td class="t-nmb">${Age}</td>
                                 <td class="N">American</td>
                                 <td class="Region">Lusaka</td>
                                 <td class="mon">January</td>
@@ -506,6 +521,15 @@ async function addData() {
                                     </span>
                                 </td>
                              </tr>`
+      })
+    })
+
+    db.collection('MuseumVisits').onSnapshot(function(snapshot){
+      let changes = snapshot.docChanges()
+      changes.forEach(function(change){
+        if (change.type == 'added') {
+          renderMusV(change.doc)
+        }
       })
     })
 
