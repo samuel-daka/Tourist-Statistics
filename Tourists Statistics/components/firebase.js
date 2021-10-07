@@ -485,36 +485,23 @@ async function addData() {
       let park = parent.querySelector('#musV-name').value
       let Region = parent.querySelector('#musV-region').textContent
       let Nationality = parent.querySelector('#musV-nat').value
-      let Age = function () {
-        let Below18 = parent.querySelector('#bel-18').value
-        let Above18 = parent.querySelector('#abv-18').value
-        if (parent.querySelector('#bel-18').value) {
-          console.log(parent.querySelector('#bel-18').value)
-            return Below18
-        }
-        if (parent.querySelector('#abv-18').value) {
-          console.log(parent.querySelector('#abv-18').value)
-          return Above18
-          
-        }
-      }
-      
-      
+      let age = document.getElementsByName('18')
       let numTourist = parent.querySelector('.tnumV').value
+      console.log(numTourist)
 
-     
 
-      db.collection('MuseumVisits').add({
+  db.collection('MuseumVisits').add({
         html:` <tr class="t-bo">
                                 <td class="S/n">1</td>
                                 <td class="id">5</td>
                                 <td class="em-nmb">0004</td>
                                 <td class="t-nmb">${numTourist}</td>
-                                <td class="t-nmb">${Age}</td>
-                                <td class="N">American</td>
-                                <td class="Region">Lusaka</td>
-                                <td class="mon">January</td>
-                                <td class="year">2021</td>
+                                <td class="t-nmb">40</td>
+                                <td class="N">${Nationality}</td>
+                                <td class="N">${Region}</td>
+                                <td class="Region">${park}</td>
+                                <td class="mon">${month}</td>
+                                <td class="year">${year}</td>
                                 <td class="del" style="border-right: solid 1px black">
                                     <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
                                         Delete
@@ -522,8 +509,46 @@ async function addData() {
                                 </td>
                              </tr>`
       })
+            //show and then hide success entry message
+    setTimeout(function () {
+     document.querySelectorAll('.succesEntry').forEach(function (e) {
+        e.style.display = 'block'
+      })
+    },800)
+    setTimeout(function () {
+      document.querySelectorAll('.succesEntry').forEach(function (e) {
+        e.style.display = 'none'
+      })
+    }, 5000)
+
+
+
     })
 
+     let MusvData = document.querySelector('.musV-data')
+    
+   function  renderMusV(doc) {
+      let MusvRow = document.createElement('tr')
+      MusvRow.setAttribute('data-id', doc.id)
+      MusvRow.setAttribute('class', 't-bo')
+      MusvRow.innerHTML = doc.data().html
+      MusvData.appendChild(MusvRow)
+    
+
+      if (MusvData.innerHTML == '') {
+        setTimeout(function(){
+
+          document.querySelectorAll('.Warning').forEach(function (e) {
+          e.style.display = 'block'
+        }, 3000)
+        })
+      }
+      if (MusvData.innerHTML !== '') {
+        document.querySelectorAll('.Warning').forEach(function (e) {
+          e.style.display = 'none'
+        })
+      }
+    }
     db.collection('MuseumVisits').onSnapshot(function(snapshot){
       let changes = snapshot.docChanges()
       changes.forEach(function(change){
