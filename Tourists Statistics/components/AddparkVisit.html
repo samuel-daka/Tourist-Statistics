@@ -165,11 +165,11 @@
               <div class="addarrival">
                   <form action="" class="natvisits-details">
                       <h2 style="color: orangered;">Add National Park visit <br> Details..</h2><hr>
-                      <input type="text" class="number-arr" placeholder="Enter number of Tourists" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px;outline:none;border:none" required><br><br>
+                      <input type="text" class="number-natv" placeholder="Enter number of Tourists" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px;outline:none;border:none" required><br><br>
                       <div class="ar-flex">
                           <div>
                              
-                              <select name="" id="" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
+                              <select name="" id="natv-ctr" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
                                   <option value="" style="display: none;">Choose Nationality</option>
                                   <option value="Zambian" >Zambian</option>
                                   <option value="American" >American</option>
@@ -187,7 +187,7 @@
                                  justify-content: space-around;">
                           <div>
                              
-                             <select name="" id="" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
+                             <select name="" id="natv-park" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
                                   <option value="" style="display: none;padding:5px;border-radius: 10px">Select Park Name</option>
                                   <option value="Luiwa" >Luiwa</option>
                                   <option value="Luangau" >Luangua</option>
@@ -198,7 +198,7 @@
                     <br>
                      <hr>
                           <div style="color: rgb(255, 255, 255);margin-top:-20px">Month</div>
-                      <select name="" id="" style="color: black;padding:5px;border-radius: 10px" required>
+                      <select name="" id="natv-mon" style="color: black;padding:5px;border-radius: 10px" required>
                           <option value="" style="display: none;">Select the month</option>
                           <option value="January">January</option>
                           <option value="February">February</option>
@@ -209,12 +209,12 @@
                           <option value="July">July</option>
                           <option value="August">August</option>
                           <option value="September">September</option>
-                          <option value="Octobe">October</option>
+                          <option value="October">October</option>
                           <option value="November">November</option>
                           <option value="December">December</option>
                       </select>
                           <div style="color: rgb(255, 255, 255);">Year</div>
-                      <select name="" id="" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
+                      <select name="" id="natv-year" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
                           <option value="" style="display: none;">Select the Year</option>
                           <option value="2021">2021</option>
                           <option value="2020">2020</option>
@@ -229,7 +229,9 @@
                   </form>
               </div>
               <div class="ar-table">
-                     <table style="width: 850px;">
+                   <div class="succesEntry">successfully added new Data</div>
+                  <div class="Warning" >No Park Visit Data entered yet!</div>
+                     <table style="width: 800px;">
                          <caption style="text-align: center;color:rgb(28, 3, 245);font-weight:bolder;">Data Entered So far</caption>
                          <tr class="t-h" style="background-color:#131921; color:white; margin:30px">
                              <th>S/N</th>
@@ -237,103 +239,19 @@
                              <th>Employee</th>
                              <th>Tourists No#</th>
                              <th>Nationality</th>
+                             <th>Region</th>
                              <th>Park Name</th>
-                             <th>Currency Type</th>
-                             <th>Fee</th>
                              <th>Month</th>
                              <th>Year</th>
                              <th>Edit</th>
                          </tr>
-                         <tr class="natv-data">
-                             <tr class="t-bo">
-                                <td class="S/n">1</td>
-                                <td class="id">5</td>
-                                <td class="em-nmb">0004</td>
-                                <td class="t-nmb">123</td>
-                                <td class="N">American</td>
-                                <td class="Region">Luangua</td>
-                                <td class="PoE">International (USD)</td>
-                                <td class="Pt">50</td>
-                                <td class="mon">January</td>
-                                <td class="year">2021</td>
-                                <td class="del" style="border-right: solid 1px black">
-                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
-                                        Delete
-                                    </span>
-                                </td>
-                             </tr>
-                             <tr class="t-bo">
-                                <td class="S/n">1</td>
-                                <td class="id">5</td>
-                                <td class="em-nmb">0004</td>
-                                <td class="t-nmb">123</td>
-                                <td class="N">American</td>
-                                <td class="Region">Luangua</td>
-                                <td class="PoE">International (USD)</td>
-                                <td class="Pt">50</td>
-                                <td class="mon">January</td>
-                                <td class="year">2021</td>
-                                <td class="del" style="border-right: solid 1px black">
-                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
-                                        Delete
-                                    </span>
-                                </td>
-                             </tr>
-                             <tr class="t-bo">
-                                <td class="S/n">1</td>
-                                <td class="id">5</td>
-                                <td class="em-nmb">0004</td>
-                                <td class="t-nmb">123</td>
-                                <td class="N">American</td>
-                                <td class="Region">Luangua</td>
-                                <td class="PoE">International (USD)</td>
-                                <td class="Pt">50</td>
-                                <td class="mon">January</td>
-                                <td class="year">2021</td>
-                                <td class="del" style="border-right: solid 1px black">
-                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
-                                        Delete
-                                    </span>
-                                </td>
-                             </tr>
-                             <tr class="t-bo">
-                                <td class="S/n">1</td>
-                                <td class="id">5</td>
-                                <td class="em-nmb">0004</td>
-                                <td class="t-nmb">123</td>
-                                <td class="N">American</td>
-                                <td class="Region">Luangua</td>
-                                <td class="PoE">International (USD)</td>
-                                <td class="Pt">50</td>
-                                <td class="mon">January</td>
-                                <td class="year">2021</td>
-                                <td class="del" style="border-right: solid 1px black">
-                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
-                                        Delete
-                                    </span>
-                                </td>
-                             </tr>
-                             <tr class="t-bo">
-                                <td class="S/n">1</td>
-                                <td class="id">5</td>
-                                <td class="em-nmb">0004</td>
-                                <td class="t-nmb">123</td>
-                                <td class="N">American</td>
-                                <td class="Region">Luangua</td>
-                                <td class="PoE">International (USD)</td>
-                                <td class="Pt">50</td>
-                                <td class="mon">January</td>
-                                <td class="year">2021</td>
-                                <td class="del" style="border-right: solid 1px black">
-                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
-                                        Delete
-                                    </span>
-                                </td>
-                             </tr>
+                         <tbody class="natv-data">
+                       
+                             
                              
                             
                            
-                         </tr>
+                         </tbody>
                      </table>
                   </div>
             </div>

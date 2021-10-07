@@ -20,6 +20,7 @@ console.log(firebase)
 
 //adding data
 async function addData() {
+  
 
   //ARRIVALS DETAILS
   async function Arrivals() {
@@ -27,8 +28,8 @@ async function addData() {
   e.preventDefault()
   console.log('hello friends i have been clicked')
   
-       let parent = document.querySelector('#ar-btn').parentElement
-       console.log(parent)
+   let parent = document.querySelector('#ar-btn').parentElement
+  console.log(parent)
 
   let ArrivalDetails = e.target.parentElement.childNodes[1].childNodes
   let NumTourist = ArrivalDetails[4].value
@@ -111,11 +112,11 @@ async function addData() {
 
     //COLLECTING THE DATA FROM THE DATABASES
   db.collection('Arrivals').onSnapshot(function (snapshot) {
-      let changes = snapshot.docChanges()
-    console.log(changes)
-     
+    let changes = snapshot.docChanges()
+    console.log(changes.length)
+    let length = changes.length
+    document.querySelector('.Arrivals-value').innerHTML = length
     changes.forEach(function (change) {
-      console.log(change.doc.data().html)
       if (change.type == 'added') {
         render(change.doc)
       }
@@ -186,6 +187,7 @@ async function addData() {
   let innerHtml = doc.data().html
     deTableRow.innerHTML = innerHtml
     deRow.appendChild(deTableRow)
+    console.log(deRow)
   
     if (deRow.innerHTML == '') {
       document.querySelectorAll('.Warning').forEach(function(e){
@@ -272,6 +274,7 @@ async function addData() {
       natRow.setAttribute('class', 't-bo')
       natRow.innerHTML = doc.data().html
       parkData.appendChild(natRow)
+      console.log(parkData)
 
       if (parkData.innerHTML == '') {
         setTimeout(function(){
@@ -289,8 +292,9 @@ async function addData() {
     }
 
     db.collection('NationaParks').onSnapshot(function (snapshot) {
+      
       let changes = snapshot.docChanges()
-
+        console.log(changes)
       changes.forEach(function (change) {
         if (change.type == 'added'){
           NatRender(change.doc)
@@ -300,19 +304,213 @@ async function addData() {
 
   }NationalParks().catch(function(){})
 
-  //NATIONAL PARKS VISITS
 
+  
+  //NATIONAL PARKS VISITS
   async function NatVisits() {
     
-    document.querySelector('#natvisits-details').addEventListener('submit', function (e) {
+    document.querySelector('.natvisits-details').addEventListener('submit', function (e) {
       e.preventDefault()
       
-      let parenthere = document.querySelector('#natvi-btn')
+      let parenthere = document.querySelector('#natvi-btn').parentElement
       console.log(parenthere)
+      let Nationality = parenthere.querySelector('#natv-ctr').value
+      let numTourist = parenthere.querySelector('.number-natv').value
+     
+      let region = parenthere.querySelector('.natv-region').textContent
+      console.log(region)
+      let parkName = parenthere.querySelector('#natv-park').value
+      let Month = parenthere.querySelector('#natv-mon').value
+      let year = parenthere.querySelector('#natv-year').value
+
+      db.collection('NationalParkVisits').add({
+        html: `  <tr class="t-bo">
+                                <td class="S/n">1</td>
+                                <td class="id">5</td>
+                                <td class="em-nmb">0004</td>
+                                <td class="t-nmb">${numTourist}</td>
+                                <td class="N">${Nationality}</td>
+                                <td class="region">${region}</td>
+                                <td class="">${parkName}</td>
+                                <td class="mon">${Month}</td>
+                                <td class="year">${year}</td>
+                                <td class="del" style="border-right: solid 1px black">
+                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
+                                        Delete
+                                    </span>
+                                </td>
+                             </tr>`
+      })
+
+          //show and then hide success entry message
+    setTimeout(function () {
+     document.querySelectorAll('.succesEntry').forEach(function (e) {
+        e.style.display = 'block'
+      })
+    },800)
+    setTimeout(function () {
+      document.querySelectorAll('.succesEntry').forEach(function (e) {
+        e.style.display = 'none'
+      })
+    }, 5000)
 
       })
+
+    let parkvData = document.querySelector('.natv-data') 
+      
+    function  renderNatV(doc) {
+      let natvRow = document.createElement('tr')
+      natvRow.setAttribute('data-id', doc.id)
+      natvRow.setAttribute('class', 't-bo')
+      natvRow.innerHTML = doc.data().html
+      parkvData.appendChild(natvRow)
+      console.log(parkvData)
+
+      if (parkvData.innerHTML == '') {
+        setTimeout(function(){
+
+          document.querySelectorAll('.Warning').forEach(function (e) {
+          e.style.display = 'block'
+        }, 3000)
+        })
+      }
+      if (parkvData.innerHTML !== '') {
+        document.querySelectorAll('.Warning').forEach(function (e) {
+          e.style.display = 'none'
+        })
+      }
+    }
+    
+    // collecting from the data backgroundSize: 
+    db.collection('NationalParkVisits').onSnapshot(function (snapshot) {
+      let changes = snapshot.docChanges()
+      changes.forEach(function (change) {
+        if (change.type == 'added') {
+          renderNatV(change.doc)
+        }
+      })
+    })
   
-  }NatVisits()
+  }NatVisits().catch(function(){})
+
+  //ADD MUSEUM DATA 
+  async function AddMuseum() {
+
+    document.querySelector('.mus-details').addEventListener('submit', function (e) {
+      e.preventDefault()
+
+      let parent = document.querySelector('#mus-btn').parentElement
+      let musName = parent.querySelector('.name-mus').value
+      let province = parent.querySelector('#mus-prnc').value
+      let Zk = parent.querySelector('#mus-zk').value
+      let usd = parent.querySelector('#mus-usd').value
+
+      db.collection('AddMuseums').add({
+        html:` <tr class="t-bo">
+                                <td class="S/n">1</td>
+                                <td class="id">5</td>
+                                <td class="em-nmb">0004</td>
+                                <td class="t-nmb">${musName}</td>
+                                <td class="N">${province}</td>
+                                <td class="Region">${Zk}</td>
+                                <td class="PoE">${usd}</td>
+                                <td class="del" style="border-right: solid 1px black">
+                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
+                                        Delete
+                                    </span>
+                                </td>
+                             </tr>`
+      })
+           //show and then hide success entry message
+    setTimeout(function () {
+     document.querySelectorAll('.succesEntry').forEach(function (e) {
+        e.style.display = 'block'
+      })
+    },800)
+    setTimeout(function () {
+      document.querySelectorAll('.succesEntry').forEach(function (e) {
+        e.style.display = 'none'
+      })
+    }, 5000)
+    })
+    
+
+
+    let MusData = document.querySelector('.mus-data')
+    
+   function  renderMus(doc) {
+      let MusRow = document.createElement('tr')
+      MusRow.setAttribute('data-id', doc.id)
+      MusRow.setAttribute('class', 't-bo')
+      MusRow.innerHTML = doc.data().html
+      MusData.appendChild(MusRow)
+      console.log(MusData)
+
+      if (MusData.innerHTML == '') {
+        setTimeout(function(){
+
+          document.querySelectorAll('.Warning').forEach(function (e) {
+          e.style.display = 'block'
+        }, 3000)
+        })
+      }
+      if (MusData.innerHTML !== '') {
+        document.querySelectorAll('.Warning').forEach(function (e) {
+          e.style.display = 'none'
+        })
+      }
+    }
+    db.collection('AddMuseums').onSnapshot(function (snapshot) {
+      let changes = snapshot.docChanges()
+      changes.forEach(function (change) {
+        if (change.type == 'added') {
+          renderMus(change.doc)
+        }
+      })
+
+    })
+  } AddMuseum().catch(function () { })
+  
+
+  // ADD MUSEUM VISITS
+
+  async function AddmusV(){
+
+    document.querySelector('.musV-details').addEventListener('submit', function (e) {
+      e.preventDefault()
+
+      let parent = document.querySelector('#musV-btn').parentElement
+      let year = parent.querySelector('#musV-year').value
+      let month = parent.querySelector('#musV-month').value
+      let park = parent.querySelector('#musV-name').value
+      let Region = parent.querySelector('#musV-region').textContent
+      let Nationality = parent.querySelector('#musV-nat').value
+      let Below18 = parent.querySelector('#bel-18').value
+      let Above18 = parent.querySelector('#abv-18').value
+      let numTourist = parent.querySelector('.tnumV').value
+
+      db.collection('MuseumVisits').add({
+        html:` <tr class="t-bo">
+                                <td class="S/n">1</td>
+                                <td class="id">5</td>
+                                <td class="em-nmb">0004</td>
+                                <td class="t-nmb">123</td>
+                                <td class="t-nmb">40</td>
+                                <td class="N">American</td>
+                                <td class="Region">Lusaka</td>
+                                <td class="mon">January</td>
+                                <td class="year">2021</td>
+                                <td class="del" style="border-right: solid 1px black">
+                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
+                                        Delete
+                                    </span>
+                                </td>
+                             </tr>`
+      })
+    })
+
+
+  }AddmusV()
  
 }addData()
 
@@ -381,3 +579,13 @@ document.querySelector('.submit-k').addEventListener('click', function (e) {
 }Authentication().catch(function(){
   
 })
+
+
+
+   //COLLECTING THE DATA FROM THE DATABASES
+  // db.collection('Arrivals').onSnapshot(function (snapshot) {
+  //   let changes = snapshot.docChanges()
+  //   console.log(changes.length)
+  //   let length = changes.length
+  //   document.querySelector('.Arrivals-value').innerHTML = length
+  //   })

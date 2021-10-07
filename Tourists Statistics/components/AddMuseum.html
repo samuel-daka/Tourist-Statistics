@@ -164,21 +164,21 @@
             
             <div class="add-ar" >
               <div class="addarrival">
-                  <form action="" class="ar-details">
+                  <form action="" class="mus-details">
                       <h2 style="color: orangered;">Add Museum Details..</h2><hr>
-                      <input type="text" class="number-arr" placeholder="Museum Name" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px;outline:none;border:none" required><br><br>
+                      <input type="text" class="name-mus" placeholder="Museum Name" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px;outline:none;border:none" required><br><br>
                       <div>
                           <div>
-                             <select name="" id="" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
+                             <select name="" id="mus-prnc" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
                                   <option value="" style="display: none;padding:5px;border-radius: 10px">Select Province</option>
-                                  <option value="" >Lusaka</option>
-                                  <option value="" >Northern</option>
-                                  <option value="" >Southern</option>
-                                  <option value="" >Central</option>
-                                  <option value="" >North western</option>
-                                  <option value="" >Muchinga</option>
-                                  <option value="" >Eastern</option>
-                                  <option value="" >Western</option>
+                                  <option value="Lusaka" >Lusaka</option>
+                                  <option value="Northern" >Northern</option>
+                                  <option value="Southern" >Southern</option>
+                                  <option value="Central" >Central</option>
+                                  <option value="North western" >North western</option>
+                                  <option value="Muchinga" >Muchinga</option>
+                                  <option value="Eastern" >Eastern</option>
+                                  <option value="Western" >Western</option>
                               </select>
                           </div>
                           
@@ -186,18 +186,20 @@
                     </div><br>
                       <div class="ar-flex" style="display: flex;
                                  justify-content: space-around;">
-                          <input type="number" name="" id="" style="color: black;padding:1px;border-radius: 10px;width:150px" placeholder="Citizens (ZK)">
-                           <input type="number" name="" id="" style="color: black;padding:1px;border-radius: 10px" placeholder="International (USD)">
+                          <input type="number" name="" id="mus-zk" style="color: black;padding:1px;border-radius: 10px;width:150px" placeholder="Citizens (ZK)">
+                           <input type="number" name="" id="mus-usd" style="color: black;padding:1px;border-radius: 10px" placeholder="International (USD)">
                           
                     </div>
                     <br>
                      <hr>
                        
-                        <button class="add-btn" style="color: white;border-radius:10px;background-color:rgb(83, 191, 241);outline:none; border:none;">Add Details</button>
+                        <button class="add-btn" id="mus-btn" style="color: white;border-radius:10px;background-color:rgb(83, 191, 241);outline:none; border:none;">Add Details</button>
                   </form>
               </div>
               <div class="ar-table">
-                     <table style="width: 850px;">
+                   <div class="succesEntry">successfully added new Data</div>
+                  <div class="Warning" >No Museum Data entered yet!</div>
+                     <table style="width: 800px;">
                          <caption style="text-align: center;color:rgb(28, 3, 245);font-weight:bolder;">Data Entered So far</caption>
                          <tr class="t-h" style="background-color:#131921; color:white; margin:30px">
                              <th>S/N</th>
@@ -209,67 +211,14 @@
                              <th>International (USD)</th>
                              <th>Edit</th>
                          </tr>
-                         <tr class="ar-data">
-                             <tr class="t-bo">
-                                <td class="S/n">1</td>
-                                <td class="id">5</td>
-                                <td class="em-nmb">0004</td>
-                                <td class="t-nmb">Livingstone Museum</td>
-                                <td class="N">Livingstone</td>
-                                <td class="Region">45</td>
-                                <td class="PoE">6.5</td>
-                                <td class="del" style="border-right: solid 1px black">
-                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
-                                        Delete
-                                    </span>
-                                </td>
-                             </tr>
-                             <tr class="t-bo">
-                                <td class="S/n">1</td>
-                                <td class="id">5</td>
-                                <td class="em-nmb">0004</td>
-                                <td class="t-nmb">Livingstone Museum</td>
-                                <td class="N">Livingstone</td>
-                                <td class="Region">45</td>
-                                <td class="PoE">6.5</td>
-                                <td class="del" style="border-right: solid 1px black">
-                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
-                                        Delete
-                                    </span>
-                                </td>
-                             </tr>
-                             <tr class="t-bo">
-                                <td class="S/n">1</td>
-                                <td class="id">5</td>
-                                <td class="em-nmb">0004</td>
-                                <td class="t-nmb">Livingstone Museum</td>
-                                <td class="N">Livingstone</td>
-                                <td class="Region">45</td>
-                                <td class="PoE">6.5</td>
-                                <td class="del" style="border-right: solid 1px black">
-                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
-                                        Delete
-                                    </span>
-                                </td>
-                             </tr>
-                             <tr class="t-bo">
-                                <td class="S/n">1</td>
-                                <td class="id">5</td>
-                                <td class="em-nmb">0004</td>
-                                <td class="t-nmb">Livingstone Museum</td>
-                                <td class="N">Livingstone</td>
-                                <td class="Region">45</td>
-                                <td class="PoE">6.5</td>
-                                <td class="del" style="border-right: solid 1px black">
-                                    <span style="margin: 2px;background-color:orangered;padding:3px;border-radius:10px;cursor:pointer">
-                                        Delete
-                                    </span>
-                                </td>
-                             </tr>
+                         <tbody class="mus-data">
+                            
+                             
+                            
                              
                         
                             
-                         </tr>
+                         </tbody>
                      </table>
                   </div>
             </div>

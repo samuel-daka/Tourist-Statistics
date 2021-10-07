@@ -163,30 +163,30 @@
             
             <div class="add-ar" >
               <div class="addarrival">
-                  <form action="" class="ar-details">
+                  <form action="" class="musV-details">
                       <h2 style="color: orangered;">Add new Musuem <br> visit <br> Details..</h2><hr>
-                      <input type="text" class="number-arr" placeholder="Enter number of Tourists" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px;outline:none;border:none" required><br>
+                      <input type="text" class="tnumV" placeholder="Enter number of Tourists" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px;outline:none;border:none" required><br>
                       <div>Note: Visitors under the age 18 <br> pay 50% of the entry fes into any museum. Specify if:</div>
                       <div class="flex-s" style="display: flex;justify-content:space-between;color:white;">
-                              <input type="radio" name="18" id="bel-18" value=' Tourist Are Below 18'>Tourists Are Below 18
+                              <input type="radio" name="18" id="bel-18" value='<18'>Tourists Are Below 18
                           
-                              <input type="radio" name="18" id="bel-18" value='Tourist Are Above 18'>Tourists Are Above 18
+                              <input type="radio" name="18" id="abv-18" value='>18'>Tourists Are Above 18
                       </div>
                       <br>
                       <div class="ar-flex">
                           <div>
                              
-                              <select name="" id="" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
+                              <select name="" id="musV-nat" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
                                   <option value="" style="display: none;">Choose Nationality</option>
-                                  <option value="" >Zambian</option>
-                                  <option value="" >American</option>
-                                  <option value="" >Russian</option>
-                                  <option value="" >Nigerian</option>
-                                  <option value="" >South African</option>
+                                  <option value="Zambian" >Zambian</option>
+                                  <option value="American" >American</option>
+                                  <option value="Russian" >Russian</option>
+                                  <option value="Nigerian" >Nigerian</option>
+                                  <option value="South African" >South African</option>
                               </select>
                           </div>
                           <div>
-                              <div type="text" placeholder="Region" style="color: rgb(2, 255, 65); padding:5px;border-radius: 10px;height:30px;width:200px;background-color:rgb(119, 115, 115);font-weight:bolder">Region</div>
+                              <div type="text" id='musV-region' placeholder="Region" style="color: rgb(2, 255, 65); padding:5px;border-radius: 10px;height:30px;width:200px;background-color:rgb(119, 115, 115);font-weight:bolder">Region</div>
                           </div>
                          
                     </div><br>
@@ -194,10 +194,10 @@
                                  justify-content: space-around;">
                           <div>
                              
-                             <select name="" id="" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
+                             <select name="" id="musV-name" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
                                   <option value="" style="display: none;padding:5px;border-radius: 10px">Select Park Name</option>
-                                  <option value="" >Luiwa</option>
-                                  <option value="" >Luangua</option>
+                                  <option value="Luiwa" >Luiwa</option>
+                                  <option value="Lungua" >Luangua</option>
                               </select>
                           </div>
                          
@@ -205,34 +205,34 @@
                     <br>
                      <hr>
                           <div style="color: rgb(255, 255, 255);margin-top:-20px">Month</div>
-                      <select name="" id="" style="color: black;padding:5px;border-radius: 10px" required>
+                      <select name="" id="musV-month" style="color: black;padding:5px;border-radius: 10px" required>
                           <option value="" style="display: none;">Select the month</option>
-                          <option value="">January</option>
-                          <option value="">February</option>
-                          <option value="">March</option>
-                          <option value="">April</option>
-                          <option value="">May</option>
-                          <option value="">June</option>
-                          <option value="">July</option>
-                          <option value="">August</option>
-                          <option value="">September</option>
-                          <option value="">October</option>
-                          <option value="">November</option>
-                          <option value="">December</option>
+                          <option value="January">January</option>
+                          <option value="February">February</option>
+                          <option value="March">March</option>
+                          <option value="April">April</option>
+                          <option value="May">May</option>
+                          <option value="June">June</option>
+                          <option value="July">July</option>
+                          <option value="August">August</option>
+                          <option value="September">September</option>
+                          <option value="October">October</option>
+                          <option value="November">November</option>
+                          <option value="December">December</option>
                       </select>
                           <div style="color: rgb(255, 255, 255);">Year</div>
-                      <select name="" id="" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
+                      <select name="" id="musV-year" style="color: rgb(0, 0, 0); padding:5px;border-radius: 10px" required>
                           <option value="" style="display: none;">Select the Year</option>
-                          <option value="">2021</option>
-                          <option value="">2020</option>
-                          <option value="">2019</option>
-                          <option value="">2018</option>
-                          <option value="">2017</option>
-                          <option value="">2016</option>
-                          <option value="">2015</option>
-                          <option value="">2014</option>
+                          <option value="2021">2021</option>
+                          <option value="2020">2020</option>
+                          <option value="2019">2019</option>
+                          <option value="2018">2018</option>
+                          <option value="2017">2017</option>
+                          <option value="2016">2016</option>
+                          <option value="2015">2015</option>
+                          <option value="2014">2014</option>
                       </select><br><br>
-                        <button class="add-btn" style="color: white;border-radius:10px;background-color:rgb(83, 191, 241);outline:none; border:none;">Add Details</button>
+                        <button class="add-btn" id="musV-btn" style="color: white;border-radius:10px;background-color:rgb(83, 191, 241);outline:none; border:none;">Add Details</button>
                   </form>
               </div>
               <div class="ar-table">
@@ -246,13 +246,11 @@
                              <th>Age</th>
                              <th>Nationality</th>
                              <th>Museum Visited</th>
-                             <th>Currency Type</th>
-                             <th>Fee</th>
                              <th>Month</th>
                              <th>Year</th>
                              <th>Edit</th>
                          </tr>
-                         <tr class="ar-data">
+                         <tbody class="musV-data">
                              <tr class="t-bo">
                                 <td class="S/n">1</td>
                                 <td class="id">5</td>
@@ -346,7 +344,7 @@
                              
                             
                            
-                         </tr>
+                         </tbody>
                      </table>
                   </div>
             </div>
